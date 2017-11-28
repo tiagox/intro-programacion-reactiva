@@ -4,10 +4,21 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Programación Reactiva</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- <link rel="stylesheet" href="css/theme/beige.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/blood.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/league.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/moon.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/night.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/serif.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/simple.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/sky.css"> -->
+		<!-- <link rel="stylesheet" href="css/theme/solarized.css"> -->
+		<link rel="stylesheet" href="css/theme/wecode.css">
+		<!-- <link rel="stylesheet" href="css/theme/white.css"> -->
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +35,654 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<img src="custom-assets/wecode.svg" alt="wecode" width="50%">
+				</section>
+
+				<section>
+					<h2>Introducción a la</h2>
+					<h1 class="white">Programación Reactiva</h1>
+					<p class="lighter"><small>@tiagox</small></p>
+				</section>
+
+				<section>
+
+					<section>
+						<p class="big">¡Hola que tal!</p>
+					</section>
+
+					<section>
+						<p class="big">Soy <strong>@tiagox</strong></p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Code Inquisitor</strong><br>at <img src="custom-assets/wecode.svg" alt="WeCode" style="vertical-align: middle; height: 1em;"></p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt"><i>Ranter</i></strong><br>at <img src="custom-assets/wecode.svg" alt="WeCode" style="vertical-align: middle; height: 1em;"></p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Me quejo de <span class="lighter">(casi)</span> todo</strong></p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>¿Qué es la Programación Reactiva?</h2>
+					</section>
+
+					<section>
+						<h3>The Reactive Manifesto <a href="https://www.reactivemanifesto.org/">*</a></h3>
+						<ul>
+							<li class="fragment">Reaccionar a eventos<span class="fragment"> => <em>Event Driven</em></span></li>
+							<li class="fragment">Reaccionar a cargas<span class="fragment"> => <em>Elastic</em></span></li>
+							<li class="fragment">Reaccionar a las fallas<span class="fragment"> => <em>Resilient</em></span></li>
+							<li class="fragment">Reaccionar al usuario<span class="fragment"> => <em>Responsive</em></span></li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>Message Driven: Mejoda desacople de componentes.</li>
+								<li>Elastic: Escalable.</li>
+								<li>Resilient: respondo incluso cuando falla.</li>
+								<li>Responsive: tiempos de respuesta.</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<img src="custom-assets/reactive-traits.svg" alt="reactive-traits.svg">
+					</section>
+
+					<section>
+						<h3>¿Qué es la Programación Reactiva?</h3>
+						<ul>
+							<li class="fragment">Es un <strong>paradigma</strong> de programación</li>
+							<li class="hidden">Todos los datos son de naturaleza <strong>asíncrona</strong></li>
+							<li class="hidden">Los cambios se propagan en forma de <strong>flujos de datos (streams)</strong></li>
+						</ul>
+					</section>
+
+					<section data-background-color="white">
+						<img src="custom-assets/squirtle.png" alt="squirtle">
+					</section>
+
+					<section>
+						<h3>¿Qué es la Programación Reactiva?</h3>
+						<ul>
+							<li>Es un <strong>paradigma</strong> de programación</li>
+							<li class="fragment">Todos los datos son de naturaleza <strong>asíncrona</strong></li>
+							<li class="fragment">Los cambios se propagan en forma de <strong>flujos de datos (streams)</strong></li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>¿Cómo se llega a todo esto?</h2>
+					</section>
+
+					<section>
+						<img src="custom-assets/design_patterns.jpg" alt="design_patterns">
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-background-color="white">
+						<h3>Iterator Pattern</h3>
+						<img src="custom-assets/iterator.svg" alt="Iterator Pattern" width="100%">
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>Implementado por las <strong>colecciones</strong></p>
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>Habilita el consumo de <strong>todos</strong> los elementos de forma progresiva</p>
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>El <strong>consumo</strong> es de un elemento a la vez</p>
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>Productor <strong>&loarr;</strong> Consumidor</p>
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>El <em>Consumidor</em> tiene el <strong>control</strong></p>
+					</section>
+
+					<section>
+						<h4>Iterator Pattern</h4>
+						<p>Frente a un pedido del Consumidor el <em>Productor</em> puede:</p>
+						<ul>
+							<li class="fragment">Retornar el siguiente elemento</li>
+							<li class="fragment">Informar que no hay más elementos</li>
+							<li class="fragment"><span class="lighter">(Rara vez)</span> Lanzar un error</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-background-color="white">
+						<h3>Observer Pattern</h3>
+						<img src="custom-assets/observer.svg" alt="Observer Pattern" width="100%">
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Es la base de la programación orientada a <strong>eventos</strong></p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Permite informar a los <strong>suscriptores</strong> sobre cambios</p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p><i>Publisher</i> <strong>&roarr;</strong> <i>Subscriber</i></p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Productor <strong>&roarr;</strong> Consumidor</p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>En este caso es el <em>Productor</em> el que tiene el <strong>control</strong></p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>En el caso de no querer recibir más datos, el Consumidor debe explícitamente <strong>desuscribirse</strong></p>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Hay 2 aspectos que se dejaron de lado:</p>
+						<ul>
+							<li class="fragment">No hay forma de informar que no hay más <strong>eventos</strong></li>
+							<li class="hidden">No contempla el informe de <strong>errores</strong></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Hay 2 aspectos que se dejaron de lado:</p>
+						<ul>
+							<li>No hay forma de informar que no hay más <strong>datos</strong></li>
+							<li class="fragment">No contempla el informe de <strong>errores</strong></li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Observer Pattern</h4>
+						<p>Una solución sería, registrar 3 <strong>callbacks</strong>:</p>
+						<ul>
+							<li class="fragment">El que recibe un dato</li>
+							<li class="fragment">Uno que trate los errores</li>
+							<li class="fragment">Y otro que se invoque cuando no haya más datos</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<p class="big">Iterator <strong>~</strong> Observer</p>
+					</section>
+
+					<section>
+						<p class="big">Observable</p>
+					</section>
+
+					<section>
+						<p class="big">Streams</p>
+					</section>
+
+					<section>
+						<p class="big">Colecciones <strong>+</strong> Tiempo</p>
+					</section>
+
+					<section>
+						<p>Colecciones</p>
+						<pre class="big-code"><code class="hljs" data-trim contenteditable>{1, 2, 3, 4, 5, 6, 7, 8}</code></pre>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Puedo solicitar los datos cuando yo lo decido</strong></p>
+					</section>
+
+					<section>
+						<p>Colecciones <strong>+</strong> Tiempo</p>
+						<pre class="big-code"><code class="hljs" data-trim contenteditable>{…1……2…3………………4…5…6………7………8}</code></pre>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Los datos me llegan asincrónicamente</strong></p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">… no se almacenan</strong></p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">… tengo que procesarlos a medida que llegan</strong></p>
+					</section>
+
+					<section data-background="custom-assets/dog-balls.gif">
+						<!-- <img src="custom-assets/dog-balls.gif" alt="dog-balls" width="100%"> -->
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<img src="custom-assets/rx-logo.svg" alt="rx-logo" width="50%">
+						<p>ReactiveX</p>
+					</section>
+
+					<section>
+						<h4>Languages</h4>
+						<ul class="two-cols small">
+							<li>Java: <strong>RxJava</strong></li>
+							<li>JavaScript: <strong>RxJS</strong></li>
+							<li>C#: <strong>Rx.NET</strong></li>
+							<li>C#(Unity): <strong>UniRx</strong></li>
+							<li>Scala: <strong>RxScala</strong></li>
+							<li>Clojure: <strong>RxClojure</strong></li>
+							<li>C++: <strong>RxCpp</strong></li>
+							<li>Lua: <strong>RxLua</strong></li>
+							<li>Ruby: <strong>Rx.rb</strong></li>
+							<li>Python: <strong>RxPY</strong></li>
+							<li>Go: <strong>RxGo</strong></li>
+							<li>Groovy: <strong>RxGroovy</strong></li>
+							<li>JRuby: <strong>RxJRuby</strong></li>
+							<li>Kotlin: <strong>RxKotlin</strong></li>
+							<li>Swift: <strong>RxSwift</strong></li>
+							<li>PHP: <strong>RxPHP</strong></li>
+							<li>Elixir: <strong>reaxive</strong></li>
+							<li>Dart: <strong>RxDart</strong></li>
+						</ul>
+						<br><br>
+						<h4>ReactiveX for platforms and frameworks</h4>
+						<ul class="two-cols small">
+							<li>RxNetty</li>
+							<li>RxAndroid</li>
+							<li>RxCocoa</li>
+						</ul>
+					</section>
+
+					<section>
+						<blockquote>
+							<h3>The Observer pattern done right</h3>
+							<p>ReactiveX is a combination of the best ideas from the <strong>Observer pattern</strong>, the <strong>Iterator pattern</strong>, and <strong>functional programming</strong></p>
+						</blockquote>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>¿Programación Funcional?</h2>
+					</section>
+
+					<section>
+						<p class="big">Si</p>
+					</section>
+
+					<section>
+						<h2>Otro paradigma</h2>
+					</section>
+
+					<section>
+						<p class="big">Si</p>
+					</section>
+
+					<section>
+						<p>Pero, ¿qué nos importa de la Programación Funcional?</p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Evitar <i>side effects</i></strong></p>
+					</section>
+
+					<section>
+						<p>¿Cómo?</p>
+					</section>
+
+					<section>
+						<p class="big"><strong class="alt">Creando Funciones Puras</strong></p>
+					</section>
+
+					<section>
+						<p>¿Para qué?</p>
+					</section>
+
+					<section>
+						<h3>Definición <a href="https://www.sitepoint.com/functional-programming-pure-functions/">*</a></h3>
+						<blockquote>
+							A pure function is a function where the return value is only determined by its input values, without observable side effects.
+						</blockquote>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<p class="big">Colecciones</p>
+					</section>
+
+					<section>
+						<h3>Para trabajar con Colecciones tenemos:</h3>
+						<ul>
+							<li><code>forEach</code></li>
+							<li><code>map</code></li>
+							<li><code>filter</code></li>
+							<li><code>reduce</code></li>
+							<li><code>flatten</code></li>
+							<li>...</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3><code>forEach</code></h3>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+[1, 2, 3, 4, 5].forEach(x => {
+    console.log(x)
+})
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+> 1
+> 2
+> 3
+> 4
+> 5
+</code></pre>
+					</section>
+
+					<section>
+						<h3><code>map</code></h3>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+[1, 2, 3, 4, 5].map(x => x * 2)
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+> [2, 4, 6, 8, 10]
+</code></pre>
+					</section>
+
+					<section>
+						<h3><code>filter</code></h3>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+[1, 2, 3, 4, 5].filter(x => x % 2 !== 0)
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+> [1, 3, 5]
+</code></pre>
+					</section>
+
+					<section>
+						<h3><code>flatten</code></h3>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+[[1], [], [2, 3], [4, 5]].flatten()
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+> [1, 2, 3, 4, 5]
+</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<p class="big"><i>Streams</i></p>
+					</section>
+
+					<section>
+						<h3><code>map</code></h3>
+						<pre class="medium-code"><code class="hljs fragment" data-trim contenteditable>
+|---1------2---3------------4---5--->
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map(x => x * 2)
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+|---2------4---6------------8---10-->
+</code></pre>
+					</section>
+
+					<section>
+							<h3><code>filter</code></h3>
+							<pre class="medium-code"><code class="hljs fragment" data-trim contenteditable>
+|---1------2---3------------4---5--->
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;filter(x => x % 2 !== 0)
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+|---1----------3----------------5--->
+</code></pre>
+					</section>
+
+					<section>
+						<h3><code>flatten</code></h3>
+						<pre class="medium-code"><code class="hljs fragment" data-trim contenteditable>
+|---1|
+|-------2--------------3|
+|------|
+|-----------4------5|
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flatten()
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+|---1---2--------------3---4---5|
+</code></pre>
+					</section>
+
+					<section>
+						<h3><code>takeUntil</code></h3>
+						<pre class="medium-code"><code class="hljs fragment" data-trim contenteditable>
+|---1------2---3-------------4---5--->
+|---------------------A---> otherStream
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;takeUntil(otherStream)
+&nbsp;
+</code><code class="hljs fragment" data-trim contenteditable>
+|---1------2---3------|
+</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<p class="big">Todo muy lindo, pero…</p>
+					</section>
+
+					<section>
+						<h3>¿De dónde saco un <i>stream</i>?</h3>
+					</section>
+
+					<section>
+						<p class="big">Hay que modelarlo</p>
+					</section>
+
+					<section>
+						<h3>¿Qué puedo modelar?</h3>
+					</section>
+
+					<section>
+						<ul class="big">
+							<li class="fragment">Eventos</li>
+							<li class="fragment">Peticiones de datos</li>
+							<li class="fragment">Animaciones</li>
+						</ul>
+					</section>
+
+					<section>
+						<p class="big"><strong>Todo es un <i>stream</i></strong></p>
+					</section>
+
+					<section>
+						<h3>¿Cómo puedo modelar un <i>stream</i>?</h3>
+					</section>
+
+					<section>
+						<pre class="medium-code"><code class="hljs" data-trim contenteditable>
+Rx.Observable.create(observer => {
+    // …
+    observer.onNext(data)
+    // …
+    observer.onError(error)
+    // …
+    observer.onCompleted()
+})
+</code></pre>
+					</section>
+
+					<section>
+						<pre class="medium-code"><code class="hljs" data-trim contenteditable>
+Rx.Observable.create(observer => {
+    let counter = 0
+    const interval = setInterval(() => {
+        if (counter < 10) {
+            observer.onNext(counter)
+            counter++
+        } else {
+            clearInterval(interval)
+            observer.onCompleted()
+        }
+  }, 1000)
+})
+</code></pre>
+					</section>
+
+					<section>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+Rx.Observable.from([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+Rx.Observable.fromPromise(fetch(requestUrl))
+</code></pre>
+						<pre class="medium-code fragment"><code class="hljs" data-trim contenteditable>
+Rx.Observable.fromEvent(saveButton, 'click')
+</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Ejemplos</h2>
+					</section>
+
+					<section>
+						<h3>Detectando doble-clicks</h3>
+					</section>
+
+					<section data-background-color="white" data-background="custom-assets/clicks.png">
+					</section>
+
+					<section>
+						<h3>Implementando drag & drop</h3>
+					</section>
+
+					<section>
+						<pre class="medium-code large"><code class="hljs" data-trim contenteditable>
+getElementDrags = (element) =>
+    element.mouseDowns
+        .map(mouseDown =>
+            document.mouseMoves.takeUntil(document.mouseUps))
+        .flatten()
+
+getElementDrags(image).forEach(position => {
+    image.position = position
+})
+</code></pre>
+					</section>
+
+					<section>
+						<pre class="medium-code large"><code class="hljs" data-trim contenteditable>
+                                             element.mouseDowns
+|---MD-------------------------------------------------------->
+                                            document.mouseMoves
+|------MM---MM---MM------MM------MM---MM---MM---MM------MM---->
+                                              document.mouseUps
+|-----------------------------------------MU------------------>
+
+        mouseDowns.map(`take mouseMoves until mouseUp`)
+
+|------------------------------------------------------------->
+    +---MM---MM---MM------MM------MM---MM-| &larr; Meta Stream
+
+                         flatten()
+
+|-------MM---MM---MM------MM------MM---MM--------------------->
+</code></pre>
+					</section>
+
+					<section>
+						<h3>Buscador con sugerencias</h3>
+					</section>
+
+					<section data-background-color="white">
+						<img src="custom-assets/suggestions.png" alt="suggestions">
+					</section>
+
+					<section>
+						<pre class="medium-code large"><code class="hljs" data-trim contenteditable>
+searchResultSets = keyPresses
+    .throttle(250)
+    .map(key =>
+        getJSON('/search?q=' + input.value)
+            .takeUntil(keyPresses))
+    .flatten()
+
+searchResultSets.forEach(
+    result => { updateSearchResults(result) }
+    error => { showError('Server down') }
+})
+</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+					<code class="big"><strong>~ fin ~</strong></code>
+				</section>
+
+				<section data-background-color="#61c2ac">
+					<h1 class="white">¡Gracias!</h1>
+					<img src="custom-assets/wico.svg" alt="wico">
+				</section>
+
 			</div>
 		</div>
 
@@ -37,6 +694,9 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				transition: 'none',
+				backgroundTransition: 'none',
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

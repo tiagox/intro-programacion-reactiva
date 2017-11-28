@@ -1,0 +1,114 @@
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #ffffff;
+$headingColor: #61c2ac;
+$headingTextShadow: none;
+$backgroundColor: #232323;
+$linkColor: #fcc34f;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #b68696;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// body:after {
+// 	content: url(custom-assets/wecode.svg);
+// 	position: fixed;
+// 	width: 100%;
+// 	bottom: 0;
+// 	left: 0;
+// 	padding: 3em;
+// 	background-color: #232323;
+// }
+img {
+	border: none !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+em, strong {
+	color: $linkColor;
+
+	&.alt {
+		color: #b68696;
+	}
+}
+.hidden {
+	visibility: hidden;
+}
+.white {
+	color: $mainColor !important;
+}
+.lighter {
+	opacity: 0.3;
+}
+.big {
+	font-size: 200% !important;
+}
+.big-code {
+	font-size: 125% !important;
+}
+.medium-code {
+	font-size: 75% !important;
+
+	&.large {
+		margin-left: -10% !important;
+		width: 120% !important;
+		max-width: 120% !important;
+	}
+}
+.small {
+	font-size: 80% !important;
+}
+.two-cols {
+	column-count: 2;
+	column-fill: balance;
+	column-gap: 5%;
+}
+.reveal {
+	pre {
+		width: auto !important;
+		code {
+			max-height: none !important;
+		}
+	}
+}
